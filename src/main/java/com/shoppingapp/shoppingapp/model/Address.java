@@ -21,7 +21,7 @@ public class Address {
     private String streetNo;
     private String buildingName;
     private String city;
-@OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Address> state= new ArrayList<>();
     private String country;
     private String pincode;

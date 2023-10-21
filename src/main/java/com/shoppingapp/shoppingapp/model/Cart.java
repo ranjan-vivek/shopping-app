@@ -17,6 +17,10 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String cartId;
+
+    @OneToOne
     private Products cartItem;
+
+    @OneToOne
     private Customer customerList;
 }
