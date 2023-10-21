@@ -19,9 +19,12 @@ public class MyOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String orderId;
-    private Products orderStatus;
+    private String orderStatus;
+    @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Products> productsList;
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     private LocalDateTime date;
 }
