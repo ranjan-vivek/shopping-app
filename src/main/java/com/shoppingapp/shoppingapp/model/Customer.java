@@ -20,7 +20,7 @@ public class Customer {
     private String firstname;
     private String lastname;
     private String mobilenumber;
-
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Address> address;
     private String email;
 }

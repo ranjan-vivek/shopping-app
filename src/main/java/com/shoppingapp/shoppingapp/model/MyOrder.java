@@ -19,7 +19,7 @@ public class MyOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String orderId;
-    private String orderStatus;
+    private Products orderStatus;
     @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
     @OneToMany(cascade = CascadeType.ALL)
