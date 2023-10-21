@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 @Data
 @AllArgsConstructor
@@ -20,8 +21,8 @@ public class Address {
     private String streetNo;
     private String buildingName;
     private String city;
-
-    private List<Address> state;
+@OneToMany(cascade = CascadeType.ALL)
+    private List<Address> state= new ArrayList<>();
     private String country;
     private String pincode;
 }
